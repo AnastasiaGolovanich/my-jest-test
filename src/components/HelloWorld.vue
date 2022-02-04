@@ -41,6 +41,26 @@ export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data: () => {
+    return {
+      counter: 0,
+      user: {
+        name: 'Harry',
+        surname: 'Potter',
+        patronus: 'deer'
+      }
+    }
+  },
+  methods: {
+    increase () {
+      this.counter++
+    }
+  },
+  computed: {
+    moreThenTen () {
+      return this.counter > 10
+    }
   }
 })
 </script>
